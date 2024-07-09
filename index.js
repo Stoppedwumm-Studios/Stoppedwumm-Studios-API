@@ -2,7 +2,7 @@ const e = require("express")
 const app = e()
 const {kv} = require("@vercel/kv")
 
-app.get("/", (res, req) => {
+app.get("/", (req, res) => {
     res.send(kv.get("Test"))
 })
 
