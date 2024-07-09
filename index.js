@@ -1,5 +1,6 @@
 const e = require("express")
 const app = e()
+const {kv} = require("@vercel/kv")
 
 const Firewall = (req, res, next) => {
     const Agent = req.getHeaders()["user-agent"]
