@@ -7,7 +7,7 @@ app.get("/", async (req, res) => {
 })
 
 app.get("/v1/license/:item/:userid", async (req, res) => {
-    const licenses = JSON.parse(await kv.get("license_"+item))
+    const licenses = JSON.parse(await kv.get("license_"+req.query["item"]))
     
     if (licenses[req.query["userid"]] == 1) {
         res.send("1")
