@@ -7,7 +7,7 @@ app.get("/", (res, req) => {
 })
 
 app.get("/v1/license", (req, res) => {
-    req.send("{}")
+    res.send("{}")
 })
 
 app.listen(3000)
